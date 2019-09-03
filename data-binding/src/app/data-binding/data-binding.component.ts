@@ -10,6 +10,11 @@ export class DataBindingComponent implements OnInit {
   url : string = 'http://loiane.com';
   cursoAngular: boolean = true;
   urlImagem = 'http://lorempixel.com/400/200/nature/'
+
+  valorAtual: string = '';
+  valorSalvo;
+
+  isMouseOver: boolean = false;
   
   getValor(){
     return 1;
@@ -17,6 +22,22 @@ export class DataBindingComponent implements OnInit {
 
   getCurtirCurso(){
     return true;
+  }
+
+  botaoClicado(){
+    alert('Botão Clicado!');
+  }
+
+  onKeyUp(evento: KeyboardEvent){
+    this.valorAtual = (<HTMLInputElement>evento.target).value;
+  }
+
+  salvarValor(valor){
+    this.valorSalvo = valor;
+  }
+
+  onMouseOverOut(){
+    this.isMouseOver = !this.isMouseOver;
   }
 
   constructor() { }
