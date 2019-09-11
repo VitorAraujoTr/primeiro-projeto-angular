@@ -9,11 +9,12 @@ import { CursosService } from './cursos.service'
 })
 export class CursosComponent implements OnInit {
 
-  cursos: string[] = ['Angular 2', 'Java', 'Phonegap'];
-  cursosService: CursosService;
+  cursos: string[] = [];
+  // cursosService: CursosService;
 
-  constructor() { 
-    this.cursosService = new CursosService();
+  constructor(private cursosService: CursosService) { 
+    // this.cursosService = new CursosService();
+    // this.cursosService = _cursosService;
    }
 
   ngOnInit() {
