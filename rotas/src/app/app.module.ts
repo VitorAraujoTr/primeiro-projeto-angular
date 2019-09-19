@@ -11,6 +11,7 @@ import { CursosService } from './cursos/cursos.service';
 // import { CursoNaoEncontratoComponent } from './cursos/curso-nao-encontrato/curso-nao-encontrato.component';
 import { AppRoutingModule } from './app.routing.module';
 import { CursosModule } from './cursos/cursos.module';
+import { AlunosModule } from './alunos/alunos.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CursosModule } from './cursos/cursos.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CursosModule
+    CursosModule,
+    AlunosModule
     // routing
   ],
   providers: [CursosService],
